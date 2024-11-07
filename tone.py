@@ -42,5 +42,6 @@ if __name__ == '__main__':
     plt.xlabel("X value", color='white')
     plt.ylabel("Y value", color='white')
     plt.show()
+    # Specifying figure characteristics 
 
  

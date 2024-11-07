@@ -152,32 +152,10 @@ def plot_data(data):
     plt.legend(loc='center left', bbox_to_anchor=(1.12, 0.5), title="Districts", ncol=3, fontsize=5)
     # Positioning legend to the right of the map using bbox_to_anchor, 3 columns for readability
 
-    geo_axes.set_xlabel('Eastings (m)', fontsize=12, color='black')  # X-axis label
-    geo_axes.set_ylabel('Northings (m)', fontsize=12, color='black')  # Y-axis label
-
-    # **Setting Axis Ticks**
-    geo_axes.set_xticks([0, 50000, 100000, 150000, 200000, 250000])  # Set x-axis ticks (Eastings)
-    geo_axes.set_yticks([0, 50000, 100000, 150000, 200000])  # Set y-axis ticks (Northings)
-
-    # **Optional: Customize the axis tick labels**
-    geo_axes.set_xticklabels([str(x) for x in [0, 50000, 100000, 150000, 200000, 250000]], fontsize=10, color='black')
-    geo_axes.set_yticklabels([str(y) for y in [0, 50000, 100000, 150000, 200000]], fontsize=10, color='black')
-
-    # **Customize the ticks appearance (marker length, direction, etc.)**
-    geo_axes.tick_params(axis='x', length=6, width=1, direction='in', grid_color='black', grid_alpha=0.5)
-    geo_axes.tick_params(axis='y', length=6, width=1, direction='in', grid_color='black', grid_alpha=0.5)
-
-    # **Add Gridlines (coordinate lines)**
-    geo_axes.grid(True)  # Enable the gridlines
-    geo_axes.xaxis.grid(True, color='black', linestyle='--', linewidth=0.5)  # Gridlines for the x-axis (Eastings)
-    geo_axes.yaxis.grid(True, color='black', linestyle='--', linewidth=0.5)
-
-
-
-
     plt.show()  # Display plot
 
 if __name__ == '__main__':
 
     edinburgh_run = rundata("natural_neighbourhoods.dat")
     plot_data(edinburgh_run)  # Calling the plot function
+
